@@ -1,5 +1,17 @@
 import Microsoft.Quantum.Diagnostics.*;
 
+//Here, you call DumpMachine four times:
+//After the qubit is allocated.
+//After you put the qubit into superposition.
+//After you measure the state of the qubit.
+//After you reset the qubit.
+//You split the MResetZ operation into two operations: M and Reset. You do this to inspect the state after the measurement.
+//To run your program in the built-in simulator, select Run above the Main operation or press Ctrl+F5. The output will be displayed in the debug console.
+//The DumpMachine function creates a table of information that describes the state of the qubit register. Specifically, it gives the probability amplitude, probability, and phase in radians for each basis state.
+//At the end of the program, you should get the result Zero or One. Let's walk through each step.
+//Initialized qubit: Each qubit that is allocated with the use statement starts in the state . Therefore, DumpMachine outputs the information that corresponds to a single-qubit register in the state .
+
+
 operation Main() : Result {
     use q = Qubit();
     //Initialized qubit: Each qubit that is allocated with the use instruction starts in the state .
